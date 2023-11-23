@@ -1,0 +1,33 @@
+.div-images {
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 2rem 5vw;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.image-card {
+    border-radius: 1rem;
+    max-width: 250px;
+    height: 280px;
+    box-shadow: var(--my-box-shadow);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 280ms;
+}
+
+.image-card:hover {
+    scale: 1.025;
+    box-shadow: var(--my-box-shadow-hover);
+}
+
+.image-card>img {
+    object-fit: cover;
+    height: 100%;
+    scale: 1.085;
+}
