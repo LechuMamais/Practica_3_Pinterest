@@ -3,7 +3,17 @@
 export const createImages = (imagesList, divImages) => {
     divImages = document.querySelector('.div-images')
     divImages.innerHTML = '';
-    for (let i = 0; i < imagesList.length; i++) {
+    console.log(imagesList);
+    if(imagesList.length==0 || imagesList=='undefined' || imagesList=='null'){
+            console.log('sin resultados')
+            let sinResultados= document.createElement('h3');
+            sinResultados.textContent = 'Sin resultados';
+            sinResultados.id = 'sin-resultados'
+            divImages.appendChild(sinResultados);
+        }else{
+                for (let i = 0; i < imagesList.length; i++) {
+        
+        
         let image = document.createElement('img');
         image.src = imagesList[i].urls.thumb;
         let imageDiv = document.createElement('div');
@@ -11,4 +21,6 @@ export const createImages = (imagesList, divImages) => {
         imageDiv.append(image)
         divImages.appendChild(imageDiv);
     }
+        }
+
 }
